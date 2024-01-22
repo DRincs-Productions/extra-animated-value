@@ -5,11 +5,12 @@ __all__ = [
     "ExtraAnimatedValue",
 ]
 
+
 @renpy.pure
 class ExtraAnimatedValue(renpy.AnimatedValue):
     """
     This extends AnimatedValue to allow:
-        Querying of the current value at any point in time 
+        Querying of the current value at any point in time
         Setting delay based on the full range
         Allowing a warper to control animation movement
         A few properties for returning current values
@@ -43,9 +44,15 @@ class ExtraAnimatedValue(renpy.AnimatedValue):
         to `value`.
     """
 
-    def __init__(self, value=0.0, range=1.0, delay=1.0, 
-                        old_value=None, range_delay=None,
-                        warper="linear"):
+    def __init__(
+        self,
+        value=0.0,
+        range=1.0,
+        delay=1.0,
+        old_value=None,
+        range_delay=None,
+        warper="linear",
+    ):
         if old_value == None:
             old_value = value
 
@@ -69,17 +76,14 @@ class ExtraAnimatedValue(renpy.AnimatedValue):
         return float(self.current_value) / float(self.range)
 
     def text(self, format="{.current_value:.0f}", **kwargs):
-        return DynamicDisplayable(self.dynamic_text, 
-                                    format=format, 
-                                    **kwargs)
+        return DynamicDisplayable(self.dynamic_text, format=format, **kwargs)
 
     def dynamic_text(self, st, at, **kwargs):
-        value = kwargs.pop('format', "{.current_value:.0f}").format(self)
-        delay = (0.1 if self.value == self.current_value else 0.02)
+        value = kwargs.pop("format", "{.current_value:.0f}").format(self)
+        delay = 0.1 if self.value == self.current_value else 0.02
         return Text(value, **kwargs), delay
 
     def periodic(self, st):
-
         if self.range < self.value:
             self.value = self.range
 
@@ -90,24 +94,22 @@ class ExtraAnimatedValue(renpy.AnimatedValue):
             return
 
         if self.range_delay is not None:
-
-            self.delay = self.range_delay \
-                        * ( abs(self.old_value - self.value) 
-                            / float(self.range) )
+            self.delay = self.range_delay * (
+                abs(self.old_value - self.value) / float(self.range)
+            )
 
         base_fraction = (st - self.start_time) / self.delay
         base_fraction = min(1.0, base_fraction)
 
         if base_fraction == 1.0:
-
             self.current_value = self.value
 
         else:
-
             fraction = renpy.atl.warpers[self.warper](base_fraction)
 
-            self.current_value = self.old_value \
-                                + fraction * (self.value - self.old_value)
+            self.current_value = self.old_value + fraction * (
+                self.value - self.old_value
+            )
 
         self.adjustment.change(self.current_value)
 
