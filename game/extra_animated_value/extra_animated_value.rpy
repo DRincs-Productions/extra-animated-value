@@ -1,4 +1,8 @@
-﻿default extra_animated_value_points = 500
+﻿init python:
+    from pythonpackages.extra_animated_value.extra_animated_value import ExtraAnimatedValue
+    from pythonpackages.extra_animated_value.value_image import ValueImage
+
+default extra_animated_value_points = 500
 default extra_animated_value_max = 1000
 
 

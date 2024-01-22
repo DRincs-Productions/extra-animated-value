@@ -1,6 +1,10 @@
 import renpy.exports as renpy
 from renpy.store import Transform
 
+__all__ = [
+    "ValueImage",
+]
+
 class ValueImage(renpy.Displayable):
     """
     A displayable that returns an image based on

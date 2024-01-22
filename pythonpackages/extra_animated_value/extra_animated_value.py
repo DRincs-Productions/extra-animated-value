@@ -1,6 +1,10 @@
 import renpy.exports as renpy
 from renpy.store import DynamicDisplayable, Text
 
+__all__ = [
+    "ExtraAnimatedValue",
+]
+
 @renpy.pure
 class ExtraAnimatedValue(renpy.AnimatedValue):
     """
