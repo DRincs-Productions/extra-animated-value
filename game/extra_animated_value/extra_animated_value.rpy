@@ -91,33 +91,3 @@ screen extra_animated_value_screen():
                     bold = True,
                     xcenter = 0.5,
                     ycenter = 0.57)
-
-
-label extra_animated_value_example:
-
-    scene expression "#777"
-
-
-    show screen extra_animated_value_screen
-
-    "Start"
-    $ extra_animated_value_points += 150
-    "..."
-    $ extra_animated_value_points -= 450
-    "..."
-    $ extra_animated_value_points -= 200
-    "..."
-    $ extra_animated_value_points += 1000
-    "..."
-    $ extra_animated_value_points -= 450
-    "..."
-    $ extra_animated_value_points -= 450
-    "..."
-    $ extra_animated_value_points += 750
-    "..."
-    $ extra_animated_value_points -= 350
-    "End"
-    
-    hide screen extra_animated_value_screen
-    
-    return
