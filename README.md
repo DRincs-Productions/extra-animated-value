@@ -4,7 +4,6 @@ Extending AnimatedValue for Bars.
 
 ![extra_animated_value](https://github.com/DRincs-Productions/extra-animated-value/assets/67595890/847a65c0-6676-440c-b608-6a39d43a18fd)
 
-
 ( Note: This gif (limited to 256 colours) is not as smooth or pretty as an in-game bar would be. )
 
 As you may or may not know, AnimatedValue is pretty limited in what it allows. Internally it just holds a value and an old value then uses a linear progression to move from one to the other over a set duration that is independent of the size of the change.
@@ -21,9 +20,9 @@ This extends that fairly limited class and allows:
 
 **[Wiki](https://github.com/DRincs-Productions/extra-animated-value/wiki)**
 
-## Please note:
+## Please note
 
-The way that some parts of this approach work might not be suitable for complete beginners. As such it will likely require some knowledge of Ren'Py in order to extend it to your particular needs. 
+The way that some parts of this approach work might not be suitable for complete beginners. As such it will likely require some knowledge of Ren'Py in order to extend it to your particular needs.
 
 Though I have tried to explain it as simply as possible, I will not be available to help extend it unless under a paid contract.
 Basically, if you want it to do more, you are expected to know enough Ren'Py to handle that yourself (or consider paying someone)
