@@ -5,7 +5,9 @@
 
 Extending AnimatedValue for Bars.
 
-![Image of ExtraAnimatedValue Bars](explain_images/extra_animated_value.gif?raw=true)
+![extra_animated_value](https://github.com/DRincs-Productions/extra-animated-value/assets/67595890/847a65c0-6676-440c-b608-6a39d43a18fd)
+
+
 ###### Note: This gif (limited to 256 colours) is not as smooth or pretty as an in-game bar would be.
 
 As you may or may not know, AnimatedValue is pretty limited in what it allows. Internally it just holds a value and an old value then uses a linear progression to move from one to the other over a set duration that is independent of the size of the change.
