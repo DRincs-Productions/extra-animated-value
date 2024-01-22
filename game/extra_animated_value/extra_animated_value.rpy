@@ -1,31 +1,4 @@
-﻿
-
-            ###########################################
-            #                                         #
-            #           To use in your game           #
-            #                                         #
-            #  AnimatedValue and this extension use   #
-            #  the screen redraw to replace themself  #
-            #  and update their display.              #
-            #                                         #
-            #  As such, the instance should be        #
-            #  created within the screen that         #
-            #  displays the bar itself.               #
-            #                                         #
-            #  The example here shows 3 bars all      #
-            #  using the same variable.               #
-            #  You should use a similar approach for  #
-            #  your bar or bars                       #
-            #                                         #
-            ###########################################
-
-    # jump to or call extra_animated_value_example to view
-
-    # You can delete these examples once you have your bars 
-    # working how you want them.
-
-
-default extra_animated_value_points = 500
+﻿default extra_animated_value_points = 500
 default extra_animated_value_max = 1000
 
 
