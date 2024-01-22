@@ -1,8 +1,5 @@
 # Extra Animated Value
 
-#### Note: All you really need are the files in [The game folder](game). Just a few sample images and a small script file. They can be dropped into a new or existing project and a label called to view an example (details in the .rpy file). 
-#### Alternatively, just clone the lot as a zip from [The Repository Main Page](https://github.com/RenpyRemix/extra-animated-value)
-
 Extending AnimatedValue for Bars.
 
 ![extra_animated_value](https://github.com/DRincs-Productions/extra-animated-value/assets/67595890/847a65c0-6676-440c-b608-6a39d43a18fd)
