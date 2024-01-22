@@ -20,6 +20,21 @@ This extends that fairly limited class and allows:
 
 **[Wiki](https://github.com/DRincs-Productions/extra-animated-value/wiki)**
 
+
+## Install LTS Version
+
+To install a precise version install it manually: [Releases](https://github.com/DRincs-Productions/NQTR-System/releases).
+
+But I recommend you to use git submodule:
+
+```bash
+git submodule add -b python-lib -- https://github.com/DRincs-Productions/extra-animated-value 'pythonpackages/extra_animated_value'
+
+```
+
+**AND** create a empty file `__init__.py` into `pythonpackages/` so `pythonpackages/__init__.py`.
+
+
 ## Please note
 
 The way that some parts of this approach work might not be suitable for complete beginners. As such it will likely require some knowledge of Ren'Py in order to extend it to your particular needs.
