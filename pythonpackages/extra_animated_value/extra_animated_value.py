@@ -7,7 +7,7 @@ __all__ = [
 
 
 @renpy.pure
-class ExtraAnimatedValue(renpy.AnimatedValue):
+class ExtraAnimatedValue(renpy.store.AnimatedValue):
     """
     This extends AnimatedValue to allow:
         Querying of the current value at any point in time
