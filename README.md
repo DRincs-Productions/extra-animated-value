@@ -1,3 +1,4 @@
+
 # Extra Animated Value
 
 Extending AnimatedValue for Bars.
@@ -15,6 +16,8 @@ This extends that fairly limited class and allows:
 - Ability to set a duration for the full range to change and use times as proportions of that for non full changes.
 - Dynamic Text methods to easily display values taken from the class.
 - A Displayable designed to help make bar images more dynamic.
+
+where you can find the images for the bar: [life bar](https://www.freepik.com/search?format=search&query=life%20bar&type=vector)
 
 ## Documentation
 
